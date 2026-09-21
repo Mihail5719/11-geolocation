@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Promise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>📍 Мои координаты</h1>
+        <p class="subtitle">Домашнее задание: Geolocation API, обёрнутый в Promise</p>
+
+        <button id="get-coords-btn">Получить координаты</button>
+
+        <div id="spinner" class="spinner hidden"></div>
+
+        <section id="result" class="result hidden">
+            <h2>Координаты получены</h2>
+            <p class="coords">
+                Широта: <span id="lat"></span><br>
+                Долгота: <span id="lng"></span>
+            </p>
+            <p class="accuracy">Точность: ~<span id="accuracy"></span> м</p>
+            <a id="map-link" href="#" target="_blank" rel="noopener">Показать на карте</a>
+        </section>
+
+        <section id="error" class="error hidden">
+            <p id="error-text"></p>
+        </section>
+
+        <p class="note">
+            Геолокация работает только в защищённом контексте (https или localhost).
+            Браузер запросит разрешение на определение местоположения.
+        </p>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
